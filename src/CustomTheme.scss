@@ -1,0 +1,32 @@
+$primary: #e9fee7;
+
+//Colors
+$greyLight: #f0f2f1;
+$lightRed: #f92d00;
+
+//Border Colors
+$green-border: #7bfc7a;
+$green-border-light: #7afc7ae6;
+$grey-border: #bdc6be;
+
+//Font Colors
+$greenishBlack: #021708;
+$greenishBlackLight: #021708d9;
+$orange: #ff8a00;
+$greyMid: #79767d;
+
+
+
+// Form check styling
+$form-check-input-bg: $greenishBlack;
+$form-check-input-border: 2px solid $greenishBlack;
+$form-check-input-focus-border: 2px solid $greenishBlack;
+$form-check-input-checked-bg-color: $greenishBlack;
+$form-check-input-checked-border-color: 2px solid $greenishBlack;
+$form-switch-color: $green-border;
+$form-switch-focus-color: $green-border;
+$form-switch-checked-color: $green-border;
+$form-switch-width: 2.5em;
+
+@import '../bootstrap/scss/bootstrap.scss';
+@import '../bootstrap/scss/variables';

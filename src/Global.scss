@@ -1,0 +1,514 @@
+@import './CustomTheme.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body {
+  box-sizing: border-box;
+  color: $greenishBlack;
+  background-color: $primary;
+}
+
+//Navbar Styling
+.navbar-nav {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-btns {
+  display: none !important;
+  @media (min-width: 768px) {
+    display: flex !important;
+  }
+}
+
+#basic-nav-dropdown {
+  & > a {
+    color: $greenishBlack;
+  }
+}
+
+//Buttons Styling
+.btn {
+  padding: 0.3rem 1.3rem;
+  border-radius: 8px;
+}
+
+.btn-green-border {
+  border: $green-border 1px solid;
+}
+
+//Home Styling
+.Home {
+  font-family: 'DM Sans', sans-serif;
+  background-image: url(./Assets/transcription-home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  min-height: 100vh;
+  box-shadow: 20px 20px 8px 8px $primary inset;
+}
+
+.littleText {
+  display: inline-block;
+  background-image: linear-gradient(to right, #25ff793b, $primary, $primary);
+  & > p > span {
+    color: $orange;
+  }
+}
+
+.home-top-text,
+.home-bottom-text {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+}
+
+.home-top-text {
+  & > h2 > span {
+    color: $orange;
+  }
+}
+
+.home-bottom-text {
+  & > p {
+    font-family: 'Work Sans', sans-serif;
+  }
+}
+
+.start-btn {
+  border-radius: 36px;
+  background-color: $greenishBlack;
+  color: #fff;
+  &:hover,
+  &:active,
+  &:hover {
+    color: #fff;
+    background-color: $greenishBlackLight;
+  }
+  filter: drop-shadow(0 4px 4px #0000004e);
+}
+
+// Transcribing Styling
+
+.Transcribing {
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  background-image: url(./Assets/transcribing-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  min-height: 100vh;
+  & > .row > p {
+    font-family: 'Work Sans', sans-serif;
+  }
+}
+
+.smallcard {
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 256px;
+  border-radius: 12px;
+}
+
+.uploadcard {
+  background-color: $green-border;
+}
+
+.sharecard {
+  background-color: $greyLight;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.368);
+}
+
+.uploadoverlay {
+  background-color: #fff;
+  max-width: 482px;
+  min-height: 546px;
+  position: relative;
+}
+
+.closeupload {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.filebrowse {
+  min-height: 222px;
+  max-width: 376px;
+  border-radius: 12px;
+  border: dotted 2px $greenishBlack;
+  cursor: pointer;
+}
+
+.choose-a-file {
+  cursor: pointer;
+  min-height: 215px;
+  left: 20%;
+  border-radius: 12px;
+  position: absolute;
+  max-width: 280px;
+  opacity: 0%;
+}
+
+.uploadurloverlay {
+  background-color: #fff;
+  max-width: 482px;
+  min-height: 464px;
+  position: relative;
+}
+
+.enter-a-url {
+  font-family: 'Work Sans', sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 396px;
+  @media (max-width: 576px) {
+    width: 196px;
+  }
+}
+
+// Starter brief
+
+.upload-more-files {
+  font-family: 'DM Sans', sans-serif;
+  filter: drop-shadow(0 4px 4px #0000004e);
+  border-radius: 36px;
+  background-color: $green-border;
+  color: #000000;
+  &:hover,
+  &:active,
+  &:hover {
+    color: #000000;
+    background-color: $green-border-light;
+  }
+}
+
+.upload-more-urls {
+  font-family: 'DM Sans', sans-serif;
+  filter: drop-shadow(0 4px 4px #0000004e);
+  border-radius: 36px;
+  background-color: #fff;
+  color: #000000;
+  &:hover,
+  &:active,
+  &:hover {
+    color: #000000;
+    background-color: #fff;
+  }
+}
+
+.upload-more-files,
+.upload-more-urls {
+  & > img {
+    @media (max-width: 420px) {
+      width: 32px;
+    }
+  }
+}
+
+.brief-main-card {
+  max-width: 716px;
+  background-color: #ffffffdd;
+}
+
+.small-headings {
+  color: $greyMid;
+  border-bottom: 1px solid $greyLight;
+}
+
+.name {
+  max-width: 264px;
+  min-width: 100px;
+}
+
+.item-name {
+  max-width: 264px;
+  @media (max-width: 576px) {
+    max-width: 120px;
+  }
+  min-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  & > p:nth-child(2) {
+    color: $lightRed;
+    cursor: pointer;
+  }
+}
+
+.list-item {
+  border-top: 1px solid $greyLight;
+  border-bottom: 1px solid $greyLight;
+  font-weight: 600;
+}
+
+.estimated-val-min {
+  color: $greyMid;
+}
+
+.ref-name-container {
+  & > label {
+    color: $greyMid;
+  }
+}
+
+.checkout-card {
+  background-color: #ffffffdd;
+  max-width: 400px;
+  max-height: 380px;
+}
+
+.checkout-btn {
+  font-family: 'DM Sans', sans-serif;
+  filter: drop-shadow(0 4px 4px #0000004e);
+  border-radius: 36px;
+  background-color: $green-border;
+  color: #000000;
+  &:hover,
+  &:active,
+  &:hover {
+    color: #000000;
+    background-color: $green-border;
+  }
+}
+
+.checkout-bottom {
+  background-color: #fff;
+}
+
+#ref-name {
+  height: 56px;
+}
+
+.faqslist {
+  & > li:nth-child(1) {
+    list-style: none;
+  }
+  & > li {
+    padding: 0.2rem 0;
+  }
+  & > li > a {
+    text-decoration: none;
+    color: $greenishBlack;
+  }
+}
+
+// Transcription Email
+.transcription-email {
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  background-image: url(./Assets/transcription-email-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.formContainer {
+  background-image: linear-gradient(to bottom, #25ff793b, $primary 25%, #fff);
+  max-width: 630px;
+  min-height: 578px;
+  & > .heading {
+    & > h2 > span {
+      color: $green-border;
+    }
+  }
+}
+
+.emailForm {
+  label {
+    margin-bottom: 0.3rem;
+  }
+  & > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & > div:nth-child(1) {
+    & > input {
+      max-width: 540px;
+      min-width: 140px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $grey-border;
+      padding: 0.3rem;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  #firstName,
+  #lastName {
+    background-color: transparent;
+    max-width: 260px;
+    min-width: 140px;
+    padding: 0.3rem;
+    border: none;
+    border-bottom: 2px solid $grey-border;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+//Transcription Complete
+
+.transcription-complete {
+  background-image: url(./Assets/transcription-complete-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.complete-details {
+  max-width: 520px;
+  background-image: linear-gradient(
+    to top,
+    $primary,
+    $primary,
+    transparent,
+    transparent,
+    transparent
+  );
+}
+
+.complete-btn {
+  max-width: 280px;
+  min-width: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 36px;
+  background-color: #fff;
+  color: $greenishBlack;
+  &:hover,
+  &:active,
+  &:hover {
+    color: $greenishBlack;
+    background-color: #fff;
+  }
+  filter: drop-shadow(0 4px 4px #0000004e);
+}
+
+.complete-btn:nth-of-type(4) {
+  background-color: $greenishBlack;
+  color: #fff;
+  &:hover,
+  &:active,
+  &:hover {
+    color: $greenishBlack;
+    background-color: #fff;
+  }
+}
+
+// Transcript View Styling
+
+.transcription-view {
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.copy-text {
+  font-family: 'DM Sans', sans-serif;
+  filter: drop-shadow(0 4px 4px #0000004e);
+  border-radius: 36px;
+  background-color: $green-border;
+  color: #000000;
+  &:hover,
+  &:active,
+  &:hover {
+    color: #000000;
+    background-color: $green-border-light;
+  }
+}
+
+.download-text {
+  font-family: 'DM Sans', sans-serif;
+  filter: drop-shadow(0 4px 4px #0000004e);
+  border-radius: 36px;
+  background-color: #fff;
+  color: #000000;
+  &:hover,
+  &:active,
+  &:hover {
+    color: #000000;
+    background-color: #fff;
+  }
+}
+
+.transcription-view-icon {
+  background-image: linear-gradient(to bottom, #25ff7946, #fff);
+  border-radius: 36px;
+}
+
+.save-text-btn {
+  font-family: 'DM Sans', sans-serif;
+  filter: drop-shadow(0 4px 4px #0000004e);
+  border-radius: 36px;
+  background-color: $green-border;
+  color: #000000;
+  &:hover,
+  &:active,
+  &:hover {
+    color: #000000;
+    background-color: $green-border-light;
+  }
+}
+
+.main-view {
+  background-color: #fff;
+  min-height: 425px;
+}
+
+.sel {
+  position: relative;
+}
+
+.sel > select {
+  appearance: none;
+}
+
+.sel::after {
+  content: '\25b6';
+  position: absolute;
+  color: $green-border;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.sel > select {
+  background-color: transparent;
+  color: $greenishBlack;
+  border: none;
+}
+
+.form-check-input {
+  height: 26px !important;
+  width: 48px !important;
+  cursor: pointer;
+}
+
+.view-text {
+  border: solid 2px $green-border;
+}
